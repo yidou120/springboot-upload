@@ -1,0 +1,12 @@
+upload:
+  file:
+    path: src/main/resources/static/
+spring:
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 128KB #默认1MB
+      max-request-size: 10MB #默认10MB
+server:
+  port: 8888

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        点我上传文件
+        <input type="file" name="file">
+        <br>
+        <input type="submit">
+    </form>
+    已经上传的文件列表
+    <li>
+        <ol th:each="item : ${fileList}">
+            <span th:text="${item}"></span>
+        </ol>
+    </li>
+</body>
+</html>
